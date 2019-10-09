@@ -2,9 +2,19 @@ import 'package:flutter/material.dart';
 import 'reusable.dart';
 import 'iconcontent.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'dart:math';
 
 void main() => runApp(BMICalculator());
-
+final Color inactiveColor = Color(0xffB3B0B6);
+final Color  activeColor =Color(0xff8D8A91 );
+enum  GenderType {
+  Male,
+  Female,
+}
+final TextStyle customFontstyle = TextStyle(
+  fontSize: 20.0,
+  fontWeight: FontWeight.bold,
+);
 class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,6 +34,10 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+
+  GenderType selectGender=GenderType.Male;
+  double _duelCommandment =1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,20 +52,34 @@ class _InputPageState extends State<InputPage> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: ReusableCard(
-                    color: Color(0xff194135),
-                    cardChild: IconContentData(
-                      icon: FontAwesomeIcons.mars,
-                      gender: "Male",
+                  child: GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        selectGender = GenderType.Male;
+                      });
+                    },
+                    child: ReusableCard(
+                      color: selectGender == GenderType.Male ? activeColor : inactiveColor,
+                      cardChild: IconContentData(
+                        icon: FontAwesomeIcons.mars,
+                        gender: "Male",
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: ReusableCard(
-                    color: Color(0xff194135),
-                    cardChild: IconContentData(
-                      icon: FontAwesomeIcons.venus,
-                      gender: "Female",
+                  child: GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        selectGender = GenderType.Female;
+                      });
+                    },
+                    child: ReusableCard(
+                      color: selectGender == GenderType.Female ? activeColor : inactiveColor,
+                      cardChild: IconContentData(
+                        icon: FontAwesomeIcons.venus,
+                        gender: "Female",
+                      ),
                     ),
                   ),
                 ),
@@ -59,22 +87,60 @@ class _InputPageState extends State<InputPage> {
             ),
             Expanded(
               flex: 0,
-              child: ReusableCard(color: Color(0xff194135)),
+              child: ReusableCard(
+                  color: inactiveColor,
+                  cardChild: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Height",
+                        style: customFontstyle,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        "$_duelCommandment CM",
+                        style: customFontstyle,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Slider(
+                        value: _duelCommandment.toDouble(),
+                        min: 10.0,
+                        max: 300.0,
+                        divisions: 10,
+                        label: '$_duelCommandment',
+                        onChanged: (double newValue) {
+                          setState(() {
+                            _duelCommandment = newValue;
+                          });
+                        },
+
+                      ),
+                    ],
+                  ),
+              ),
             ),
             Row(
               children: <Widget>[
                 Expanded(
-                  child: ReusableCard(color: Color(0xff194135)),
+                  child: ReusableCard(color: inactiveColor),
                 ),
                 Expanded(
-                  child: ReusableCard(color: Color(0xff194135)),
+                  child: ReusableCard(color: inactiveColor),
                 ),
               ],
             ),
             Expanded(
               child: Container(
                 height: 10,
-                color: Colors.teal,
+                color: Colors.pinkAccent,
+                padding: EdgeInsets.all(10.0),
+
+
+
               ),
             )
           ],
