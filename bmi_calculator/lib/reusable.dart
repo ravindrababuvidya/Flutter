@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class ReusableCard extends StatelessWidget {
   final Color color;
   final Widget cardChild;
-  ReusableCard({@required this.color,this.cardChild});
+  ReusableCard({@required this.color, this.cardChild});
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +14,10 @@ class ReusableCard extends StatelessWidget {
       width: 150.0,
       //color: Colors.white,
       decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-
+        color: color,
+        borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
       child: cardChild,
-
     );
   }
 }
-

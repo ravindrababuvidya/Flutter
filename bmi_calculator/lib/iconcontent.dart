@@ -4,7 +4,7 @@ class IconContentData extends StatelessWidget {
   final IconData icon;
   final String gender;
 
-  IconContentData({this.icon,this.gender});
+  IconContentData({this.icon, this.gender});
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +19,8 @@ class IconContentData extends StatelessWidget {
           height: 10.0,
         ),
         Text(
-          "Male",
-          style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold
-          ),
+          gender,
+          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
         ),
       ],
     );
