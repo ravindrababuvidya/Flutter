@@ -3,6 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
+Simulator Screen Shot - iPhone 11 Pro Max - 2020-03-17 at 19.44.21.png
 
 This project is a starting point for a Flutter application.
 
