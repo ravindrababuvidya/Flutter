@@ -3,7 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
-![alt text](https://github.com/ravindrababuvidya/Flutter/blob/master/mrcnews/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-03-17%20at%2019.44.21.png)
+![alt text](https://github.com/ravindrababuvidya/Flutter/blob/master/mrcnews/Webp.net-gifmaker%20(1).gif)
 
 This project is a starting point for a Flutter application.
 
