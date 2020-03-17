@@ -3,9 +3,10 @@
 A new Flutter project.
 
 ## Getting Started
-Simulator Screen Shot - iPhone 11 Pro Max - 2020-03-17 at 19.44.21.png
+[Application Screen UI](https://github.com/ravindrababuvidya/Flutter/blob/master/mrcnews/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20Max%20-%202020-03-17%20at%2019.44.21.png)
 
 This project is a starting point for a Flutter application.
+
 
 A few resources to get you started if this is your first Flutter project:
 
