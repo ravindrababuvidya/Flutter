@@ -5,7 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 <p align="left">
-  <img src="https://github.com/ravindrababuvidya/Flutter/blob/master/mrcnews/Webp.net-gifmaker%20(1).gif" width="350" title="hover text">
+  <img src="https://github.com/ravindrababuvidya/Flutter/blob/master/mrcnews/Webp.net-gifmaker%20(1).gif" width="250" height="500"title="hover text">
   
 </p>
 
