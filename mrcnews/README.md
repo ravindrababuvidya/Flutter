@@ -3,7 +3,11 @@
 A new Flutter project.
 
 ## Getting Started
-![alt text](https://github.com/ravindrababuvidya/Flutter/blob/master/mrcnews/Webp.net-gifmaker%20(1).gif )
+
+<p align="center">
+  <img src="https://github.com/ravindrababuvidya/Flutter/blob/master/mrcnews/Webp.net-gifmaker%20(1).gif" width="350" title="hover text">
+  
+</p>
 
 This project is a starting point for a Flutter application.
 
